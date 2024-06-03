@@ -1,5 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Zyanru from './Zyanru';
+
+
 const Header = () => {
   return (
     <header>
@@ -9,13 +12,13 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-          <Link to="/">トップ</Link>
+          <Link to="/">TopPage</Link>
           </li>
           <li>
-            <Link to="/Zyanru">ジャンル</Link>
+            <Link to="/Zyanru"><Zyanru/></Link>
           </li>
           <li>
-          <Link to="/Otoiawase">お問い合わせ</Link>
+          <Link to="/Otoiawase">Contact form</Link>
           </li>
         </ul>
       </nav>

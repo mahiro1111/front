@@ -5,13 +5,13 @@ const Ainote = () => {
   return (
     <div className="Ainotecontainer">
       <div className="Ainotesidebar">
-        <h2>Genre</h2>
+        <h2 style={{ fontFamily:'Hachi Maru Pop, cursive' }}>ジャンル</h2>
         <div className="Ainotesearch">
-          <label htmlFor="Ainotesearch">Music Search</label>
-          <input type="text" id="search" placeholder="Search" />
+          <label htmlFor="Ainotesearch" style={{ fontFamily:'Hachi Maru Pop, cursive' }}>楽曲検索</label>
+          <input style={{ fontFamily:'Hachi Maru Pop, cursive' }} type="text" id="search" placeholder="検索" />
         </div>
         <div className="Ainotelist">
-          <h3>Music List</h3>
+          <h3 style={{ fontFamily:'Hachi Maru Pop, cursive' }}>楽曲一覧</h3>
           <ul>
             <li>---</li>
             <li>---</li>

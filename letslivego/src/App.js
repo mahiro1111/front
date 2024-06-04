@@ -9,9 +9,6 @@ import Demo from './maincomponent';
 import { UIProvider } from '@yamada-ui/react';
 import Sidebar from './sidebar';
 
-
-
-
 function App() {
   return (
     <div>
@@ -30,8 +27,9 @@ function App() {
       </div>
         </div>
     </Router>
-    </UIProvider>
     <Sidebar/>
+    </UIProvider>
+    
     </div>
   );
 }

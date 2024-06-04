@@ -43,10 +43,11 @@ nav ul li a:hover{
 .main-content {
   padding-top: 60px; /* ヘッダーの高さに合わせて調整 */
 }
-.Demo{
+.Toppage {
   z-index: 3;
   padding-top: 100px;
-}
+  
+} 
 
 .sideopen{
   position: fixed;
@@ -132,5 +133,59 @@ nav ul li a:hover{
 }
 
 
+.Ainotecontainer {
+  display: flex;
+  height: 100vh;
+}
+
+.Ainotesidebar {
+  width: 25%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-right: 2px solid #cde0e7;
+}
+
+.Ainotecontent {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 0 10px 10px 0; /* 角の丸み */
+}
+
+.Ainotesidebar h2 {
+  font-size: 24px;
+  font-family: cursive;
+}
+
+.Ainotesidebar .Ainotesearch {
+  margin-top: 20px;
+  font-family: cursive;
+
+}
+
+.Ainotesidebar .Ainotesearch input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #cde0e7;
+}
+
+.Ainotesidebar .Ainotelist {
+  margin-top: 20px;
+  font-family: cursive;
+}
+
+.Ainotesidebar .Ainotelist ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Ainotesidebar .Ainotelist ul li {
+  background-color: #cde0e7;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
 
 

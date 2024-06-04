@@ -5,9 +5,11 @@ import Zyanru from './Zyanru';
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 import Toppage from './TopPage';
 import Ainote from './Ainote';
-import Demo from './maincomponent';
 import { UIProvider } from '@yamada-ui/react';
 import Sidebar from './sidebar';
+
+
+
 
 function App() {
   return (
@@ -15,8 +17,9 @@ function App() {
     <UIProvider>
     <Router>
       <div className='App'>
-      <Demo/>
+      <Toppage/>
         <Header />
+        
         <div className="main-content">
         <Routes>
         <Route path="/TopPage" element={<Toppage />} />
@@ -27,9 +30,8 @@ function App() {
       </div>
         </div>
     </Router>
-    <Sidebar/>
     </UIProvider>
-    
+    <Sidebar/>
     </div>
   );
 }

@@ -6,9 +6,9 @@
 
 
 
-header{
-  
+.header{
   display: flex;
+  top:0px;
   justify-content: space-around;
   align-items: center;
   background: linear-gradient(to right, #96f2e8, #00a8ff);
@@ -19,7 +19,7 @@ header{
   z-index: 2;
   height: 60px;
 }
-header .logo h3{
+.header .logo h3{
   font-size: 30px;
 }
 
@@ -45,8 +45,7 @@ nav ul li a:hover{
 }
 .Toppage {
   z-index: 3;
-  padding-top: 100px;
-  
+  padding-top: 100px; 
 } 
 
 .sideopen{

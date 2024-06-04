@@ -9,7 +9,7 @@ const TopPage = () => {
   const location = useLocation();
   const shouldShowButton = location.pathname !== '/Ainote';
   return(
-    <header>
+    <div>
     <ul className="Toppage">
     <li >
       {shouldShowButton && (
@@ -19,8 +19,8 @@ const TopPage = () => {
         
       )}
     </li>
-  </ul>
-  </header>
+    </ul>
+    </div>
 )
 }
 

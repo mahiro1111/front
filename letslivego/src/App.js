@@ -26,7 +26,7 @@ function App() {
         
         <Header />
         <Routes>
-        <Route path="/TopPage" element={<Toppage />} />
+        <Route path="/" element={<Toppage />} />
         <Route path="/Zyanru" element={<Zyanru />} />
         <Route path="/Otoiawase" element={<Otoiawase />} />
         <Route path="/Ainote" element={<Ainote />} />

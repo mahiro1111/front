@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Zyanru from './Zyanru';
+//import Zyanru from './Zyanru';
+import './style.css'
 
 
 const Header = () => {
@@ -11,14 +12,14 @@ const Header = () => {
       </div>
       <nav>
         <ul>
-          <li>
-          <Link to="/">TopPage</Link>
+          <li style={{ fontFamily:'Hachi Maru Pop, cursive' }}>
+          <Link to="/">ホーム</Link>
           </li>
-          <li>
-            <Link to="/Zyanru"><Zyanru/></Link>
+          <li style={{ fontFamily:'Hachi Maru Pop, cursive' }}>
+            <Link to="/Zyanru">ジャンル</Link>
           </li>
-          <li>
-          <Link to="/Otoiawase">Contact form</Link>
+          <li style={{ fontFamily:'Hachi Maru Pop, cursive' }}>
+          <Link to="/Otoiawase">お問い合わせ</Link>
           </li>
         </ul>
       </nav>

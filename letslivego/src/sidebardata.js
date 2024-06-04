@@ -15,6 +15,7 @@ export const SidebarData=[
         title:"掲示板",
         icon:<PiListHeartLight/>
 
+
     },
     {
         title:"ランキング",
@@ -27,7 +28,8 @@ export const SidebarData=[
     },
     {
         title:"ライブ情報",
-        icon:<BsMusicPlayerFill/>
-
+        icon:<BsMusicPlayerFill/>,
+        link: "/Live"
+        
     }
 ];

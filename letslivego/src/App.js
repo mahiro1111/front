@@ -10,22 +10,26 @@ import Sidebar from './sidebar';
 
 
 
-
 function App() {
   return (
     <div>
+      
     <UIProvider>
+    
     <Router>
       <div className='App'>
+       
       <Toppage/>
         <Header />
         
         <div className="main-content">
         <Routes>
+          
         <Route path="/TopPage" element={<Toppage />} />
           <Route path="/Zyanru" element={<Zyanru />} />
           <Route path="/Otoiawase" element={<Otoiawase />} />
           <Route path="/Ainote" element={<Ainote />} />
+          
         </Routes>
       </div>
         </div>

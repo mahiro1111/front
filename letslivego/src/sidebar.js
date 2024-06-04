@@ -2,12 +2,12 @@ import React from 'react';
 import {SidebarData} from './sidebardata';
 import { GoMoveToStart } from "react-icons/go";
 import { GoListUnordered } from "react-icons/go";
+import './style.css'
 
 class Sidebar extends React.Component{
     constructor(props){
         super(props);
         this.state={isSidebarOpen:false}
-        this.state={buttonOpen:true}
     }
 
     handleClickOpen(){
@@ -27,9 +27,13 @@ class Sidebar extends React.Component{
                         <ul class='sidebarlist'>
                             {SidebarData.map((value,key)=>{
                                 return(
-                                    <li>
+                                    <li
+                                        key={key}
+                                        className="row"
+                                        onClick={()=>{window.location.pathname=value.link;}}
+                                    >
                                         <div id="icon">{value.icon}</div>
-                                        <div id="icon">{value.title}</div>
+                                        <div style={{ fontFamily:'Hachi Maru Pop, cursive' }}  id="icon">{value.title}</div>
                                     </li>
                                 )
                             })}

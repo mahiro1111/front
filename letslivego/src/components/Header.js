@@ -1,12 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 //import Zyanru from './Zyanru';
-import './style.css'
+import '../style.css'
 
 
 const Header = () => {
   return (
-    <header>
+      <div class="header">
       <div className="logo2">
         <img src="/logo.png" alt="logo" style={{ width: '80px', height: '80px' }} /> 
       </div>
@@ -23,7 +23,8 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-    </header>
+      </div>
+      
   )
 }
 

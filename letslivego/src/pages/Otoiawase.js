@@ -1,7 +1,7 @@
 import React from 'react';
 //import { Button } from 'react-bootstrap';
 import { Button } from "@yamada-ui/react";
-import './App.css';
+import '../App.css';
 
 const Otoiawase = () => {
   return (

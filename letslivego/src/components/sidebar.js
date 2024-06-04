@@ -2,7 +2,7 @@ import React from 'react';
 import {SidebarData} from './sidebardata';
 import { GoMoveToStart } from "react-icons/go";
 import { GoListUnordered } from "react-icons/go";
-import './style.css'
+import '../style.css'
 
 class Sidebar extends React.Component{
     constructor(props){

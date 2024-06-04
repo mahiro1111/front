@@ -13,9 +13,8 @@ export const SidebarData=[
     },
     {
         title:"掲示板",
-        icon:<PiListHeartLight/>
-
-
+        icon:<PiListHeartLight/>,
+        link:"/keiziban"
     },
     {
         title:"ランキング",

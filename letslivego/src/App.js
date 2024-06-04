@@ -1,5 +1,4 @@
 import './App.css';
-//import { UIProvider } from "@yamada-ui/react"
 import Header from './Header';
 import Otoiawase from './Otoiawase';
 import Zyanru from './Zyanru';
@@ -8,15 +7,15 @@ import Toppage from './TopPage';
 import Ainote from './Ainote';
 import Demo from './maincomponent';
 import { UIProvider } from '@yamada-ui/react';
-//import Hedderbox from './hedder';
+import Sidebar from './sidebar';
 
 
 
 
 function App() {
   return (
+    <div>
     <UIProvider>
-      
     <Router>
       <div className='App'>
       <Demo/>
@@ -32,6 +31,8 @@ function App() {
         </div>
     </Router>
     </UIProvider>
+    <Sidebar/>
+    </div>
   );
 }
 

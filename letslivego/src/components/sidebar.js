@@ -3,6 +3,7 @@ import {SidebarData} from './sidebardata';
 import { GoMoveToStart } from "react-icons/go";
 import { GoListUnordered } from "react-icons/go";
 import '../style.css'
+import {Link} from 'react-router-dom';
 
 class Sidebar extends React.Component{
     constructor(props){
@@ -30,8 +31,8 @@ class Sidebar extends React.Component{
                                     <li
                                         key={key}
                                         className="row"
-                                        onClick={()=>{window.location.pathname=value.link;}}
                                     >
+                                        <Link to={value.link}></Link>
                                         <div id="icon">{value.icon}</div>
                                         <div style={{ fontFamily:'Hachi Maru Pop, cursive' }}  id="icon">{value.title}</div>
                                     </li>

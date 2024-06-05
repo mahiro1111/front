@@ -1,58 +1,60 @@
 import React from 'react';
-import {SidebarData} from './sidebardata';
+import { SidebarData } from './sidebardata';
 import { GoMoveToStart } from "react-icons/go";
 import { GoListUnordered } from "react-icons/go";
-import '../style.css'
+import '../style.css';
+import { Link } from 'react-router-dom';
 
-class Sidebar extends React.Component{
-    constructor(props){
+class Sidebar extends React.Component {
+    constructor(props) {
         super(props);
-        this.state={isSidebarOpen:false}
+        this.state = { isSidebarOpen: false };
     }
 
-    handleClickOpen(){
-        this.setState({isSidebarOpen:true});
+    handleClickOpen() {
+        this.setState({ isSidebarOpen: true });
     }
 
-    handleClickClose(){
-        this.setState({isSidebarOpen:false});
+    handleClickClose() {
+        this.setState({ isSidebarOpen: false });
     }
 
-    render(){
+    render() {
         let sidebar;
-        if(this.state.isSidebarOpen){
-            sidebar=(
-                <div >
-                    <div class='sidebar'>
-                        <ul class='sidebarlist'>
-                            {SidebarData.map((value,key)=>{
-                                return(
+        if (this.state.isSidebarOpen) {
+            sidebar = (
+                <div>
+                    <div className='sidebar'>
+                        <ul className='sidebarlist'>
+                            {SidebarData.map((value, key) => {
+                                return (
                                     <li
                                         key={key}
                                         className="row"
-                                        onClick={()=>{window.location.pathname=value.link;}}
                                     >
-                                        <div id="icon">{value.icon}</div>
-                                        <div style={{ fontFamily:'Hachi Maru Pop, cursive' }}  id="icon">{value.title}</div>
+                                        <Link to={value.link}>
+                                            <div id="icon">{value.icon}</div>
+                                            <div style={{ fontFamily: 'Hachi Maru Pop, cursive' }} id="icon">{value.title}</div>
+                                        </Link>
                                     </li>
-                                )
+                                );
                             })}
                         </ul>
                     </div>
-                    <button class='sideclose'
-                    onClick={()=>{this.handleClickClose()}}
-                    ><GoMoveToStart/></button>
+                    <button className='sideclose'
+                        onClick={() => { this.handleClickClose(); }}
+                    ><GoMoveToStart /></button>
                 </div>
-            )
+            );
         }
-        return(
+        return (
             <div>
-                <button class='sideopen'
-                 onClick={()=>{this.handleClickOpen()}}
-                ><GoListUnordered/></button>
+                <button className='sideopen'
+                    onClick={() => { this.handleClickOpen(); }}
+                ><GoListUnordered /></button>
                 {sidebar}
             </div>
-        )
+        );
     }
 }
 

@@ -18,12 +18,13 @@ export const SidebarData=[
     },
     {
         title:"ランキング",
-        icon:<PiRankingFill/>
-
+        icon:<PiRankingFill/>,
+        link:"/rankingu"
     },
     {
         title:"あなたのお気に入り",
-        icon:<GoStarFill/>
+        icon:<GoStarFill/>,
+        link:"/okiniiri"
     },
     {
         title:"ライブ情報",

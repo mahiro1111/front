@@ -16,7 +16,7 @@ const Header = () => {
           <Link to="/">ホーム</Link>
           </li>
           <li style={{ fontFamily:'Hachi Maru Pop, cursive' }}>
-            <Link to="/Zyanru">ジャンル</Link>
+          <Link to="/Zyanru">ジャンル</Link>
           </li>
           <li style={{ fontFamily:'Hachi Maru Pop, cursive' }}>
           <Link to="/Otoiawase">お問い合わせ</Link>

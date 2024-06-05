@@ -183,6 +183,19 @@ nav ul li a:hover{
   margin-bottom: 10px;
   border-radius: 5px;
 }
+
+.Ainotecontent textarea {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  font-size: 16px;
+  border: 1px solid #cde0e7;
+  border-radius: 10px;
+  box-sizing: border-box;
+  resize: none; /* サイズ変更不可 */
+}
+
+
 .contact-form {
   background-color: #ffffff; /* フォーム全体の背景色 */
   padding: 20px; /* フォームの内側に余白を追加 */
@@ -221,4 +234,66 @@ nav ul li a:hover{
   font-size: 28px;
   padding-bottom: 15px;
   margin-bottom: 50px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* カードを中央揃え */
+  margin: 0 auto; /* コンテナ自体を中央に */
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 16px;
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05); /* ホバー時にカードを拡大 */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  justify-content: center
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 1.25em;
+  margin-bottom: 8px;
+}
+
+.card-description {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-button {
+  background-color: #85dff7;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.card-button:hover {
+  background-color: #edfb6f;
 }

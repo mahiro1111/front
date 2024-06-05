@@ -22,7 +22,8 @@ const Ainote = () => {
         </div>
       </div>
       <div className="Ainotecontent">
-        <p>歌詞表示される</p>
+      <textarea placeholder="ここに歌詞が表示されます"></textarea>
+
       </div>
     </div>
   )

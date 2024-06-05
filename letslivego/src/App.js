@@ -23,6 +23,7 @@ function App() {
         <div className="main-content">
         
         <Header />
+        <Sidebar/>
         <Routes>
         <Route path="/" element={<Toppage />} />
         <Route path="/Zyanru" element={<Zyanru />} />
@@ -38,7 +39,7 @@ function App() {
       </div>
     </Router>
     </UIProvider>
-    <Sidebar/>
+    
     </div>
   );
 }

@@ -1,0 +1,33 @@
+/* 吹き出し本体 */
+.balloon-think{
+    position: relative;
+    padding: 20px;
+    background-color: #ade0ff;
+    border-radius: 30px;
+    margin-left: 4em;
+    margin-bottom: 2em;
+  }
+  /* 大きい丸 */
+  .balloon-think::before{
+    content: '';
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    background-color: #ade0ff;
+    left: -35px;
+    bottom: 15px;
+    width: 30px;
+    height: 30px;
+  }
+  /* 小さい丸 */
+  .balloon-think::after{
+    content: '';
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    background-color: #ade0ff;
+    left: -55px;
+    bottom: 10px;
+    width: 15px;
+    height: 15px;
+  }

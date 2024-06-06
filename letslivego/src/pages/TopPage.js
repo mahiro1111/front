@@ -1,7 +1,6 @@
 //import { Button } from "@yamada-ui/react";
 //import {Link} from 'react-router-dom';
-import { Link, useLocation } from 'react-router-dom';
-import { Calendar } from "@yamada-ui/calendar";
+import { Link } from 'react-router-dom';
 
 const cards = [
   {

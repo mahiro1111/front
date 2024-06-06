@@ -1,7 +1,7 @@
 import React from 'react';
 //import { Button } from 'react-bootstrap';
 
-const Ainoten = () => {
+const Ainoten = ({ content })  => {
   return (
     <div className="Ainotecontainer">
       <div className="Ainotesidebar">
@@ -20,6 +20,9 @@ const Ainoten = () => {
             <li>---</li>
           </ul>
         </div>
+      </div>
+      <div className="Ainotecontent">
+          {content}
       </div>
     </div>
   )

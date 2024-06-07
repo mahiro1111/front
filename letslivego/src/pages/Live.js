@@ -8,7 +8,7 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/effect-coverflow';
  
 
-export default () => {
+const Live = () => {
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]}
@@ -33,7 +33,7 @@ export default () => {
       <SwiperSlide>
         <a href="https://k-arena.com/" className="slide-link">
           <div className="slide-wrapper">
-            <img src="k-ari.jpg" alt="Image 1" className="slide-image"/>
+            <img src="k-ari.jpg" alt="1" className="slide-image"/>
             <div className="slide-text">kアリーナ</div>
           </div>
         </a>
@@ -41,7 +41,7 @@ export default () => {
       <SwiperSlide>
         <a href="https://www.tokyo-dome.co.jp/" className="slide-link">
           <div className="slide-wrapper">
-            <img src="Tokyodomecity.jpg" alt="Image 2" className="slide-image"/>
+            <img src="Tokyodomecity.jpg" alt="2" className="slide-image"/>
             <div className="slide-text">東京ドームシティホール</div>
           </div>
         </a>
@@ -49,7 +49,7 @@ export default () => {
       <SwiperSlide>
         <a href="https://www.bigsight.jp/" className="slide-link">
           <div className="slide-wrapper">
-            <img src="kokusaiko-ru.jpg" alt="Image 3" className="slide-image"/>
+            <img src="kokusaiko-ru.jpg" alt="3" className="slide-image"/>
             <div className="slide-text">国際展示場</div>
           </div>
         </a>
@@ -57,7 +57,7 @@ export default () => {
       <SwiperSlide>
         <a href="https://ariake-arena.tokyo/" className="slide-link">
           <div className="slide-wrapper">
-            <img src="ariakeari-na.jpg" alt="Image 4" className="slide-image"/>
+            <img src="ariakeari-na.jpg" alt="4" className="slide-image"/>
             <div className="slide-text">有明アリーナ</div>
           </div>
         </a>
@@ -65,3 +65,5 @@ export default () => {
     </Swiper>
   );
 };
+
+export default Live;

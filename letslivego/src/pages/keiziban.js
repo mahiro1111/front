@@ -45,7 +45,7 @@ const Keizi = () => {
           onChange={(e) => setNewPostText(e.target.value)}
           placeholder="新しい投稿を入力してください"
         ></textarea>
-        <button onClick={addPost}>投稿する</button>
+        <a href="#" class="btn btn-gradient" onClick={addPost}><span>PUSH!</span></a>
       </div>
       {/* 投稿リスト */}
       <ul className="post-list">

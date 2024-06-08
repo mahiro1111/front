@@ -92,37 +92,58 @@ a.btn-gradient:hover:after {
 }
 
 /* 吹き出し本体 */
-.balloon-think{
+.balloon-think {
   position: relative;
   padding: 20px;
-  background-color: #ade0ff;
+  background-color: #fdc4ff;
   border-radius: 30px;
-  margin-right: 4em; /* margin-left から margin-right に変更 */
-  margin-bottom: 2em;
+  margin-left: 4em; /* margin-left から margin-right に変更 */
+  margin-bottom: 1em;
+  max-width: 50%;
+}
+
+.balloon-think.right {
+  background-color: #ade0ff;
+  margin-right: auto; /* 右側からの距離を自動調整 */
+  float: right; /* 右から表示 */
+  clear: both; /* 横並びを防ぐ */
+  left: -50px;
 }
 
 /* 大きい丸 */
-.balloon-think::before{
+.balloon-think::before {
   content: '';
   position: absolute;
   display: block;
   border-radius: 50%;
-  background-color: #ade0ff;
-  right: -35px; /* left から right に変更 */
+  background-color: #fdc4ff;
+  left: -35px; /* left から right に変更 */
   bottom: 15px;
   width: 30px;
   height: 30px;
 }
 
+.balloon-think.right::before {
+  background-color: #ade0ff;
+  left: auto; /* 左側の位置を自動調整 */
+  right: -40px; /* right から left に変更 */
+}
+
 /* 小さい丸 */
-.balloon-think::after{
+.balloon-think::after {
   content: '';
   position: absolute;
   display: block;
   border-radius: 50%;
-  background-color: #ade0ff;
-  right: -55px; /* left から right に変更 */
+  background-color: #fdc4ff;
+  left: -55px; /* left から right に変更 */
   bottom: 10px;
   width: 15px;
   height: 15px;
+}
+
+.balloon-think.right::after {
+  background-color: #ade0ff;
+  left: auto; /* 左側の位置を自動調整 */
+  right: -60px; /* right から left に変更 */
 }

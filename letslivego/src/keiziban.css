@@ -38,17 +38,18 @@ button.btn {
 a.btn-gradient {
   font-weight: normal;
 
-  color: #fff;
+  color: #484848;
   border-radius: 0;
   background-image: -webkit-gradient(
     linear,
     left top,
     right top,
-    color-stop(40%, #fcb6de),
-    to(#ab85cc)
+    color-stop(40%, #ff3cac),
+    to(#562b7c)
   );
-  background-image: -webkit-linear-gradient(left, #fcb6de 40%, #ab85cc 100%);
-  background-image: linear-gradient(90deg, #fcb6de 40%, #ab85cc 100%);
+  background-image: -webkit-linear-gradient(left, #e0c3fc 40%,#fcbaff 100%);
+  background-image: linear-gradient(90deg, #e0c3fc 40%,#fcbaff 100%);
+  border-radius: 100vh;
 }
 
 a.btn-gradient:after {
@@ -67,14 +68,14 @@ a.btn-gradient:after {
     linear,
     left top,
     right top,
-    from(#fcb6de),
-    color-stop(#ab85cc),
+    from(#ff3cac),
+    color-stop(#562b7c),
     to(#2b86c5)
   );
 
-  background-image: -webkit-linear-gradient(left, #fcb6de, #ab85cc, #2b86c5);
-
-  background-image: linear-gradient(90deg, #fcb6de, #ab85cc, #2b86c5);
+  background-image: -webkit-linear-gradient(left, #e0c3fc, #fcbaff, #70b8ff);
+  border-radius: 100vh;
+  background-image: linear-gradient(90deg, #e0c3fc, #fcbaff, #70b8ff);
 }
 
 a.btn-gradient span {
@@ -82,24 +83,8 @@ a.btn-gradient span {
   z-index: 1;
 }
 
-a.btn-gradient {
-  -webkit-transform: skew(-15deg);
-  transform: skew(-15deg);
-  color: #fff;
-  border-radius: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(#2af598), to(#009efd));
-  background-image: -webkit-linear-gradient(left, #2af598 0%, #009efd 100%);
-  background-image: linear-gradient(90deg, #2af598 0%, #009efd 100%);
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-}
-
 a.btn-gradient:hover {
-  -webkit-transform: skew(0);
-  transform: skew(0);
-  color: #fff;
-  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
-  box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+  color: #484848;
 }
 
 a.btn-gradient:hover:after {

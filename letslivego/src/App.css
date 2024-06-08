@@ -297,16 +297,34 @@ nav ul li a:hover{
 .card-button:hover {
   background-color: #edfb6f;
 }
+
+.live-container {
+  padding: 20px;
+  
+}
+
+.live-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.live-search-bar {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
 .slide-wrapper {
   position: relative;
   overflow: hidden;
-  margin-top: 200px; /* paddingではなくmarginを使用 */
+  margin-top: 100px; /* paddingではなくmarginを使用 */
   border-radius: 10px; /* 角を丸くする */
 }
 
 .slide-image {
   width: 100%;
-  height: auto;
+  height: 400px;
   object-fit: cover; /* 画像のアスペクト比を維持しながらコンテナに収める */
   border-radius: 10px; /* 画像自体にも角を丸くするスタイルを適用 */
 }

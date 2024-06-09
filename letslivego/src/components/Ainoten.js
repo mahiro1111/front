@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Ainoten = ({ content, onSearch }) => {
   const [searchValue, setSearchValue] = useState('');
-  const [searchType, setSearchType] = useState('song'); // 新しく追加
+  const [searchType, setSearchType] = useState('song'); // 初期値を 'song' に設定
   const [searchHistory, setSearchHistory] = useState([]);
 
   const handleSearchChange = (event) => {
@@ -39,6 +39,7 @@ const Ainoten = ({ content, onSearch }) => {
           <select value={searchType} onChange={handleTypeChange}>
             <option value="song">曲名</option>
             <option value="artist">歌手名</option>
+            <option value="lyrics">歌詞の一部分</option>
           </select>
           <button onClick={handleSearchClick}>検索</button>
         </div>
@@ -46,13 +47,13 @@ const Ainoten = ({ content, onSearch }) => {
           <h3 style={{ fontFamily:'Hachi Maru Pop, cursive' }}>検索履歴</h3>
           <ul>
             {searchHistory.map((item, index) => (
-              <li key={index}>{item.type === 'song' ? `曲名: ${item.value}` : `歌手名: ${item.value}`}</li>
+              <li key={index}>{item.type === 'song' ? `曲名: ${item.value}` : item.type === 'artist' ? `歌手名: ${item.value}` : `歌詞: ${item.value}`}</li>
             ))}
           </ul>
         </div>
       </div>
       <div className="Ainotecontent">
-          {content}
+        {content}
       </div>
     </div>
   );

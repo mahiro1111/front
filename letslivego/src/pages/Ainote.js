@@ -4,9 +4,10 @@ import axios from 'axios';
 
 const Ainote = () => {
   const [lyrics, setLyrics] = useState(null);
+  const [songTitle, setSongTitle] = useState(null); // 曲名を保存する状態を追加
   const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
-  const [searchType, setSearchType] = useState('song'); // 初期値を 'song' に設定
+  const [searchType, setSearchType] = useState('song');
 
   useEffect(() => {
     if (searchTerm !== '') {
@@ -25,9 +26,11 @@ const Ainote = () => {
           const songData = response.data[0];
           if (songData && songData.lyrics) {
             setLyrics(songData.lyrics);
+            setSongTitle(songData.title || searchTerm); // 曲名を設定
             setError(null);
           } else {
             setLyrics(null);
+            setSongTitle(null);
             setError('歌詞データが見つかりません');
           }
         })
@@ -44,7 +47,10 @@ const Ainote = () => {
   };
 
   const content = (
-    <textarea value={lyrics || ''} readOnly placeholder="ここに歌詞が表示されます"></textarea>
+    <>
+      <h3>{songTitle || '曲名が表示されます'}</h3>
+      <textarea value={lyrics || ''} readOnly placeholder="ここに歌詞が表示されます"></textarea>
+    </>
   );
 
   return (

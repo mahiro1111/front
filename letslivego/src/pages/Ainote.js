@@ -3,20 +3,23 @@ import Ainoten from '../components/Ainoten';
 import axios from 'axios';
 
 const Ainote = () => {
-  const [lyrics, setLyrics] = useState(null); // 初期値を null に設定
+  const [lyrics, setLyrics] = useState(null);
   const [error, setError] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
+  const [searchType, setSearchType] = useState('song'); // 新しく追加
 
   useEffect(() => {
-    if (searchTerm !== '') { // 検索語が空でない場合のみ実行
-      const url = `http://localhost/songs/song_name/${searchTerm}`;
+    if (searchTerm !== '') {
+      const url = `http://localhost/songs/${searchType}_name/${searchTerm}`;
       axios
         .get(url) 
         .then(response => {
           const songData = response.data[0];
           if (songData && songData.lyrics) {
             setLyrics(songData.lyrics);
+            setError(null);
           } else {
+            setLyrics(null);
             setError('歌詞データが見つかりません');
           }
         })
@@ -25,10 +28,11 @@ const Ainote = () => {
           setError('通信に失敗しました');
         });
     }
-  }, [searchTerm]);
+  }, [searchTerm, searchType]);
 
-  const handleSearch = (searchValue) => {
+  const handleSearch = (searchValue, type) => {
     setSearchTerm(searchValue);
+    setSearchType(type);
   };
 
   const content = (
@@ -43,4 +47,3 @@ const Ainote = () => {
 }
 
 export default Ainote;
-
